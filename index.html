@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DriftGuard – Coming online</title>
+  <meta name="description" content="DriftGuard – posture & drift monitoring for Intune + Entra ID (multi-tenant)." />
+  <style>
+    :root { color-scheme: light; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#f6f8fb; color:#0f172a; }
+    header { background:#0b5fa5; color:white; padding:28px 20px; }
+    header .wrap { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { font-size:28px; font-weight:800; letter-spacing:.2px; }
+    .tag { opacity:.9; font-size:14px; }
+    main { max-width:1100px; margin:0 auto; padding:34px 20px 60px; }
+    .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap:22px; align-items:start; }
+    .card { background:white; border-radius:14px; box-shadow: 0 10px 24px rgba(15, 23, 42, .08); padding:22px; }
+    h1 { margin:0 0 10px; font-size:34px; }
+    p { margin:0 0 14px; line-height:1.5; color:#334155; }
+    .btns { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    a.btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:650; border:1px solid rgba(15,23,42,.12); }
+    a.primary { background:#0b5fa5; color:white; border-color:#0b5fa5; }
+    a.ghost { background:white; color:#0b5fa5; }
+    .list { margin:10px 0 0; padding:0; list-style:none; }
+    .list li { padding:10px 0; border-bottom:1px solid rgba(15,23,42,.08); }
+    .muted { color:#64748b; font-size:13px; }
+    footer { max-width:1100px; margin:0 auto; padding:0 20px 30px; color:#64748b; font-size:12px; }
+    @media (max-width: 900px){ .hero{ grid-template-columns: 1fr; } }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div>
+        <div class="brand">DriftGuard</div>
+        <div class="tag">Intune + Entra ID posture & drift monitoring (multi-tenant)</div>
+      </div>
+      <div class="muted" style="color:rgba(255,255,255,.85)">
+        Hosted on clouden.dk
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <section class="card">
+        <h1>Velkommen</h1>
+        <p>DriftGuard bliver din kundeportal til sikkerhedsstatus, drift-detektion og anbefalinger på tværs af tenants.</p>
+        <p class="muted">
+          Denne side er en “baseline landing page”, så deployment pipeline og domæner kan valideres først.
+          Næste step bliver login (Entra ID) og tenant-vælgning (fx <strong>lindemose.com</strong>).
+        </p>
+
+        <div class="btns">
+          <a class="btn primary" href="/login">Log ind (kommer snart)</a>
+          <a class="btn ghost" href="https://github.com/Cloudendk/driftguard-frontend" target="_blank" rel="noreferrer">GitHub repo</a>
+          <a class="btn ghost" href="https://blue-moss-06b4a0d03.4.azurestaticapps.net" target="_blank" rel="noreferrer">SWA default hostname</a>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2 style="margin:0 0 10px">Det her validerer vi nu</h2>
+        <ul class="list">
+          <li><strong>CI/CD:</strong> GitHub Actions deployer en rigtig side</li>
+          <li><strong>Routing:</strong> `/login` route findes (placeholder)</li>
+          <li><strong>Domæne:</strong> senere `clouden.dk/driftguard` via host-site routing</li>
+          <li><strong>Security baseline:</strong> headers + auth i næste iteration</li>
+        </ul>
+        <p class="muted" style="margin-top:12px">
+          Når dette deployer “grønt”, bygger vi React/Vite UI + Entra auth på en kontrolleret måde.
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 DriftGuard · clouden.dk
+  </footer>
+</body>
+</html>
